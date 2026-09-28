@@ -7,8 +7,8 @@ WikiText-2 scorer on CPU FP32.
 
 ## Submission links
 
-- Checkpoint bundle: [MP1_final_checkpoint_bundle.zip](https://github.com/jeffrey032420-wq/MP1-improvement/releases/download/mp1-final-1.5685106195/MP1_final_checkpoint_bundle.zip)
-- Release record: [mp1-final-1.5685106195](https://github.com/jeffrey032420-wq/MP1-improvement/releases/tag/mp1-final-1.5685106195)
+- Checkpoint bundle: [MP1_final_checkpoint_bundle.zip](https://github.com/jeffrey032420-wq/dase7506-mp1-3036798641/releases/download/mp1-final-1.5685106195/MP1_final_checkpoint_bundle.zip)
+- Release record: [mp1-final-1.5685106195](https://github.com/jeffrey032420-wq/dase7506-mp1-3036798641/releases/tag/mp1-final-1.5685106195)
 - Exact checkpoint SHA-256: `9dc7e4bb6d6bf4690bad10c6087b0406e562ee46f5aadec65b3ea7003993e49b`
 
 ## Reproduce the frozen score

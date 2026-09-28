@@ -1,0 +1,11 @@
+{
+  "protocol": "7506-mp1-wt2-v2",
+  "status": "selected_before_full_test",
+  "selection_date": "2026-09-28",
+  "checkpoint_sha256": "9dc7e4bb6d6bf4690bad10c6087b0406e562ee46f5aadec65b3ea7003993e49b",
+  "implementation_sha256": "8f3ddf0e5d91891d17fbf69b5f002976ece778b8d914a1f3a8cdcb060853cc24",
+  "validation_bpb_cpu_fp32": 1.5479098185499127,
+  "same_weight_mechanism_ablation_bpb": 1.5623286467106856,
+  "checkpoint_bytes": 63313762,
+  "test_result_used_for_selection": false
+}

@@ -1,0 +1,19 @@
+{
+  "protocol": "7506-mp1-wt2-v2",
+  "checkpoint_sha256": "9dc7e4bb6d6bf4690bad10c6087b0406e562ee46f5aadec65b3ea7003993e49b",
+  "implementation_sha256": "8f3ddf0e5d91891d17fbf69b5f002976ece778b8d914a1f3a8cdcb060853cc24",
+  "finite": true,
+  "causality_max_abs": 0.0,
+  "batch_independence_max_abs": 1.239776611328125e-05,
+  "batch_independence_matches_course_tolerance": true,
+  "state_reset_max_abs": 0.0,
+  "normalization_max_abs": 3.5762786865234375e-07,
+  "training_interface_shape": [
+    2,
+    12,
+    2048
+  ],
+  "training_loss_finite": true,
+  "training_gradients_finite_nonzero": true,
+  "passed": true
+}

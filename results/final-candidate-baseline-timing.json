@@ -1,0 +1,8 @@
+{
+  "seconds": 10.901197700000921,
+  "bpb_random_weights": 3.624800316900152,
+  "device": "cpu",
+  "precision": "fp32",
+  "threads": 4,
+  "note": "Random weights measure architecture runtime only; BPB is not a baseline score."
+}

@@ -1,0 +1,36 @@
+run,implementation,seed,train_targets,parameters,bigram_scale,validation_bpb,train_seconds,notes
+baseline-full,model,17,9830400,1088256,0,2.0710833229,454.2861,Supplied architecture and standard recipe
+student-width128-full,student,17,19660800,5282560,0.12,1.9039608936,1345.8610,Previous frozen validation model
+screen-a0,student,17,6553600,5282560,0.12,2.1467287625,331.5052,LayerNorm GELU tied-head control
+screen-a1,student,17,6553600,5544704,0.12,2.1196524119,338.5984,Untied output head
+screen-a2,student,17,6553600,5281576,0.12,2.1128295036,394.0932,RMSNorm plus SwiGLU
+screen-a3,student,17,6553600,6416216,0.12,2.0531745234,729.4386,A2 with 6 blocks width 160
+screen-a4,student,17,6553600,6743896,0.12,2.0384418577,682.8345,A3 plus untied output head
+student-a4-ablation,student,17,19660800,6743896,0,1.7481195873,2200.5089,Paired residual-off ablation
+student-a4-frozen,student,17,19660800,6743896,0.06,1.7452702801,2200.5089,Frozen validation-selected model; test pending
+pilot-phase2-reset-lr15e5,student,17,20480000,6743896,0,1.7612072498,92.9837,Rejected 200-step optimizer-reset pilot
+pilot-phase2-keepopt-lr1e5,student,17,20480000,6743896,0,1.7475076371,91.7395,Selected 200-step continued-AdamW pilot
+pilot-phase2-keepopt-lr3e5,student,17,20480000,6743896,0,1.7486676716,95.3811,Rejected 200-step continued-AdamW pilot
+student-a5-ablation,student,17,24576000,6743896,0,1.7449917987,2786.9595,Phase-2 transformer-only validation
+student-a5-frozen,student,17,24576000,6743896,0.07,1.7419452756,2786.9595,Prior 40 validation-selected model; test pending
+student-a6-phase3-ablation,student,17,29491200,6743896,0,1.7422742690,3477.4561,Continued AdamW at 1e-5
+student-a6-phase3-calibrated,student,17,29491200,6743896,0.066,1.7392768012,3477.4561,Prior 40 validation calibration
+student-a6-phase4-ablation,student,17,34406400,6743896,0,1.7399543052,4173.9175,Continued AdamW at 1e-5
+student-a6-final-ablation,student,17,39321600,6743896,0,1.7378636295,4846.9918,Final transformer-only checkpoint
+student-a6-frozen,student,17,39321600,6743896,0.066,1.7348943477,4846.9918,Prior 40 validation-selected model; test pending
+pilot-a7-constant-lr1e5,student,17,40960000,6743896,0,1.7375634178,194.3880,Paired 400-step validation pilot from A6 state; phase-only time; rejected
+pilot-a7-cosine-lr1e5-to1e6,student,17,40960000,6743896,0,1.7373190227,186.7453,Paired 400-step validation pilot from A6 state; phase-only time; selected
+pilot-a7-constant-lr3e6,student,17,40960000,6743896,0,1.7374550068,174.4421,Paired 400-step validation pilot from A6 state; phase-only time; rejected
+student-a7-ablation,student,17,44236800,6743896,0,1.7369889202,5379.5261,Selected cosine pilot plus 800-step 1e-6 hold; transformer only
+student-a7-frozen,student,17,44236800,6743896,0.064,1.7341349340,5379.5261,Prior 40 validation-selected model; test pending
+student-a8-global-calibration,student_adaptive,17,44236800,6743896,0.128,1.7300699939,5379.5261,Temperature 1.09 and global residual scale; validation only
+student-a8-adaptive,student_adaptive,17,44236800,6743896,adaptive,1.7299709019,5379.5261,Temperature 1.08 and seven training-frequency-bin scales; test pending
+student-a9-unigram,student_unigram,17,44236800,6743896,adaptive,1.7290152469,5379.5261,A8 plus training-unigram bias scale 0.05; test pending
+a10-softcap-grid,student_softcap,17,44236800,6743896,adaptive,1.7290152469,0.0000,Post-hoc validation grid; every positive cap was worse; rejected; test not run
+screen-value-l345-shared,student_value,17,6553600,7071579,0.12,2.0325812246,1618.9555,Exact 1600-step screen beat 2.0384418577 control by 0.0058606331; test not run
+student-a11-value-phase1,student_value_unigram,17,47513600,7071579,adaptive,1.7282035112,808.8928,A9-equivalent zero-scale initialization plus 800 train-only adaptation steps; selected; test pending
+student-a11-value-phase2,student_value_unigram,17,50790400,7071579,adaptive,1.7283519230,804.8526,Second 800-step continuation regressed by 0.0001484118; rejected; test not run
+student-a12-local-grid,student_value_unigram,17,47513600,7071579,adaptive,1.7280475458,0.0000,Fixed 3x3 validation-only temperature and unigram-scale grid; boundary optimum; test not run
+student-a12-local-refine,student_value_unigram,17,47513600,7071579,adaptive,1.7278203248,0.0000,One predeclared adjacent 3x3 refinement; selected and frozen; test pending
+student-a13-train-ngrams,student_ngram,17,47513600,7071579,adaptive,1.7058655656,0.0000,A12 plus one complete train-text n-gram count pass; validation-selected bonuses; exact copy ablation
+student-a14-window-copy,student_copy,17,47513600,7071579,adaptive,1.6668337400,0.0000,A13 plus independent-window causal copy; validation-selected bonuses; frozen test 1.6902207397

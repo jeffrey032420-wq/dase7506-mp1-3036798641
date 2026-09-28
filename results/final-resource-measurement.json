@@ -1,0 +1,15 @@
+{
+  "bpb": 1.5479098185499127,
+  "token_ppl": 26.32892672547061,
+  "nll_nats": 1231730.3773145752,
+  "targets": 376599,
+  "utf8_bytes": 1148007,
+  "seconds": 40.83000109999921,
+  "protocol": "7506-mp1-wt2-v2",
+  "split": "validation",
+  "precision": "fp32",
+  "checkpoint_sha256": "9dc7e4bb6d6bf4690bad10c6087b0406e562ee46f5aadec65b3ea7003993e49b",
+  "implementation_sha256": "8f3ddf0e5d91891d17fbf69b5f002976ece778b8d914a1f3a8cdcb060853cc24",
+  "peak_working_set_bytes": 2043830272,
+  "peak_working_set_gib": 1.9034652709960938
+}

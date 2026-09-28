@@ -1,6 +1,7 @@
 # MP1 final submission — 1.5685106195 BPB
 
-This repository contains the final frozen submission for DASE7506 MP1. The
+This repository contains the final frozen submission for DASE7506 MP1 (Student
+ID: **3036798641**). The
 reported full-test score is **1.5685106195 BPB**, evaluated using the supplied
 WikiText-2 scorer on CPU FP32.
 

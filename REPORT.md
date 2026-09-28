@@ -1,5 +1,7 @@
 # MP1 final report — causal language model with training-only continuation memory
 
+Student ID: **3036798641**
+
 ## Result and rules
 
 The frozen predictor reaches **1.547910 validation BPB** and **1.568511 full-test BPB** with the supplied CPU FP32 scorer. The exact serialized checkpoint is `checkpoint/checkpoint.pt`, SHA-256 `9dc7e4bb6d6bf4690bad10c6087b0406e562ee46f5aadec65b3ea7003993e49b`. The implementation module is `student_train_topk3`.
